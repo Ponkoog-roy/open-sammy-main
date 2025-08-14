@@ -1,0 +1,80 @@
+template:
+  notification:
+    name: Notification mail template
+    type: 0
+    subject: Ha recibido una notificación en SAMMY
+    message: |
+      Estimado/a [name],<br/><br/>
+      Usted ha recibido una nuevas notificaciones en SAMMY. Por favor loguearse en SAMMY para verlas. Aquí hay un resumen listado de estas:<br/>
+          [notifications]<br/><br/>
+      El equipo SAMMY!
+
+  administrator_password_reset:
+    name: Administrator password reset
+    type: 1
+    subject: Sus credenciales de acceso en SAMMY
+    message: |
+      Estimado/a [name],<br />
+      <br />
+      Aquí está el link de un sólo uso para crear o actualizar sus credenciales de acceso en la plataforma de SAMMY. Haga click en el link o copie/pegue en la ventana del navegador.<br />
+      <br />
+      [link]<br />
+      Por favor tenga en cuenta que este link es válido hasta [linkValidity].
+      <br /><br/>
+      El equipo SAMMY!
+
+  user_password_reset:
+    name: User password reset
+    type: 2
+    subject: Sus credenciales de acceso en SAMMY
+    message: |
+      Estimado/a [name],<br />
+      <br />
+      Aquí está el link de un sólo uso para crear o actualizar sus credenciales de acceso en la plataforma de SAMMY. Haga click en el link o copie/pegue en la ventana del navegador.<br />
+      <br />
+      [link]<br />
+      Por favor tenga en cuenta que este link es válido hasta [linkValidity].
+      <br /><br/>
+      El equipo SAMMY!
+
+  user_welcome:
+    name: User welcome mail
+    type: 3
+    subject: Bienvenido a SAMMY
+    message: |
+      Estimado/a [name],<br />
+      <br />
+      Gracias por registrarse en SAMMY. Acá se encuentra su link de un sólo uso para finalizar su registro y elegir su contraseña. Haga click en el link o copie/peque en la ventada del navegador.<br />
+      <br />
+      [link]<br />
+      Por favor tenga en cuenta que este link es válido hasta [linkValidity].
+      <br /><br/>
+      El equipo SAMMY!
+
+  changed_password:
+    name: Changed password
+    type: 4
+    subject: Sus credenciales de acceso en SAMMY han sido modificadas
+    message: |
+      Estimado/a [name],<br />
+      <br />
+      Su contraseña ha sido modificada.<br />
+      <br />
+      Si udsted no ha hecho este cambio por favor contáctenos inmediatamente.
+      <br /><br/>
+      El equipo SAMMY!
+
+  user_welcome_sso:
+    name: User welcome mail
+    type: 50
+    subject: Bienvenido a SAMMY
+    message: |
+      Estimado/a [name],<br />
+      <br />
+      Gracias por su registro en la herramienta SAMMY. Ahora puede agregar a su equipo en la herramienta y crear su primera evaluación SAMM.
+      <br />
+      No buscamos aprovechar, analizar o vender sus datos para ningún propósito engañoso o comercial, incluso de forma anónima. Sus datos están seguros con nosotros. Ofrecemos implementaciones locales y dedicadas de la herramienta. Por favor contacte a nuestro equipo si desea considerar esa opción.
+      <br />
+      Sus sugerencias y recomendaciones serán bienvenidas.
+      <br /><br/>
+      El equipo SAMMY!

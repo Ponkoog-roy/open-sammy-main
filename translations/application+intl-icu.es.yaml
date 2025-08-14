@@ -1,0 +1,661 @@
+application :
+  index :
+    streams_without_answer : Seguimiento de evaluación
+    name : Nombre
+    business_function : Función empresarial
+    practice : Práctica de seguridad
+    priority : Prioridad
+    high : Alta
+    medium : Media
+    low : Baja
+    priority_thresholds : "Peso: {weight} <br> Alta: &gt;= {high} <br/> Media: [ {medium} - {high} ) <br> Baja: &lt; {medium}"
+    priority_tooltip : "La prioridad es una función del peso. <br> Alta: &gt;= {high}, Media: [ {medium} - {high} ), Baja: &lt; {medium} <br> El peso se calcula de la siguiente manera: <br>(PuntuacionMaxima - PuntuacionActual) * (MejorPuntuacion/3), 
+    <br>donde MejorPuntuacion es el número de estrellas que seleccionas para cada flujo."
+    actions : Acciones
+    preview : Detalles
+    view_all : Ver todo
+    hide : Ocultar
+    question : Pregunta
+    answer_text : Respuesta
+    stream_name : Flujo
+    non_verified_streams : Seguimiento de validación
+    in_or_for_improvement_streams : Seguimiento de mejora
+    status : Estado
+    assigned_to : "Asignado a"
+    score : "Puntuación"
+    unvalidated_score_tooltip : "Esta puntuación aún no ha sido validada"
+    submitted_by : "Evaluado por"
+    validated_by : "Validado por"
+    in_improvement : En mejora
+    for_improvement : Validado
+    assignments : Todos los flujos
+    assignments_my_assignments : Solo mis asignaciones
+    assignments_tooltip : "ON - Muestra todos los flujos <br>OFF - Muestra solo tus asignaciones"
+    first_date_modal : Fecha actual
+    second_date_modal : Fecha de la fase anterior
+    stream : Flujo
+    completed_streams : Completado
+    completed_by : Completado por
+    back_phase_tooltip : Ir a la fecha de la fase anterior
+    next_phase_tooltip : Ir a la fecha de la siguiente fase
+    no_current_project : No tienes ámbitos. Por favor, crea un ámbito desde Ámbitos->Crear un nuevo ámbito o contacta a tu gerente.
+    stream_weight : Prioridad
+    stream_weight_description : "La prioridad es una función del peso. <br> Alta: >= Peso máximo posible / 2, 
+    <br> Media: >= Peso máximo posible / 4, 
+    <br> Baja >= 0  
+    <br>
+     El peso se calcula de la siguiente manera: <br> ((1 + (PuntuacionObjetivo - PuntuacionActual))^2) - 1
+    <br> Si PuntuacionActual > PuntuacionObjetivo el peso es 0.00
+    <br> Los valores negativos se redondean a 0.00."
+    stream_weight_none : Ninguno
+    stream_weight_low : Baja
+    stream_weight_medium : Media
+    stream_weight_high : Alta
+    stream_weight_hover : "Peso: {weight}<br>Puntuación de postura: {postureScore}<br>Tu puntuación: {currentScore}<br>Diferencia: {delta}"
+    phase1_tooltip : Fase 1
+    phase1_text : F1
+
+  reporting :
+    no_current_project : No tienes un ámbito seleccionado. Selecciona o crea uno, o contacta a tu gerente.
+    full_screen : Pantalla completa
+    download : Descargar
+    export_answers_power_bi : Exportar todas las respuestas en formato Power BI
+    export_answers_power_bi_button : Exportar todas las respuestas
+    historic_change_per_function : Crecimiento histórico
+    bar_per_function : Puntuaciones por función empresarial
+    bar_per_practice : Puntuaciones por práctica
+    target_posture_coverage : Porcentaje al objetivo
+    target_posture_coverage_info : Este valor representa tu brecha con respecto a la puntuación objetivo. Se calcula como la brecha relativa con la postura objetivo para las preguntas en las que el ámbito no cumple con los requisitos de postura objetivo.
+    spider_per_function : Puntuaciones por función empresarial
+    spider_per_prctice : Puntuaciones por práctica
+    projected : Mostrar objetivos de mejora
+    power_bi_export : Exportar a Power BI
+    assessment_report : Informe de evaluación
+    please_enter_the : Por favor ingresa el
+    started_pdf_generation : Tu informe se está generando, espera por favor...
+    report_pdf_success : Informe generado con éxito
+    report_pdf_error : Error al generar el informe
+    assessment_pdf_export : Generar informe de evaluación
+    unvalidated_score_toggle : Puntuación no validada
+    unvalidated_score : Puntuación total no validada
+    validated_score : Puntuación total validada
+    next_phase_score : Puntuación total proyectada para la siguiente fase
+    verified_score : Última puntuación verificada externamente
+    target_score : Puntuación objetivo
+
+  general :
+    no_date : No establecido
+    metadata : Metadatos
+    id : ID
+    created_at : Creado en
+    updated_at : Última actualización
+    changelog_title : Historial de cambios de SAMMY
+    changelog_view_tooltip : Haz clic para ver el historial de actualizaciones
+    old_password : Contraseña anterior
+    change_password_digit_message : Tu contraseña debe contener al menos un dígito
+    change_password_lower_case_message : Tu contraseña debe contener al menos una letra minúscula
+    change_password_upper_case_message : Tu contraseña debe contener al menos una letra mayúscula
+    breached_password : Tu contraseña ha estado en una filtración de datos. Cámbiala por favor.
+    confirm_password : Confirmar contraseña
+    new_password : Nueva contraseña
+    email_mismatch : Los campos de correo electrónico deben coincidir.
+    login : Iniciar sesión
+    login_title : Bienvenido a SAMMY
+    login_credentials : Por favor, ingresa tus credenciales de inicio de sesión
+    login_invalid_credentials : No se pudieron validar tus credenciales de inicio de sesión
+    forgot_password : Olvidé mi contraseña
+    signin_with_gitlab : Iniciar sesión con tu cuenta de GitLab
+    signin_with_github : Iniciar sesión con tu cuenta de GitHub
+    signin_with_google : Iniciar sesión con tu cuenta de Google
+    signin_with_microsoft : Iniciar sesión con tu cuenta de Microsoft
+    cancel : Cancelar
+    mfa_enter_authenticator_code : Ingresa los 6 dígitos del código que muestra tu aplicación de autenticación.
+    mfa_code_placeholder : Código de 6 dígitos
+    my_profile : Mi perfil
+    my_profile_title : Mi perfil
+    save_button : Guardar
+    test_button : Probar integración
+    new : Nuevo
+    sso_user_not_found : No tienes acceso a SAMMY. Pide a tus compañeros que te agreguen en la herramienta SAMMY.
+    sso_title : Configuración de contraseña
+    sso_password_strength : La contraseña elegida no cumple con los requisitos mínimos. Debe tener al menos 12 caracteres con 1 letra mayúscula, 1 letra minúscula y 1 número.
+    password_requirements : Por favor, selecciona una contraseña. Debe tener al menos 12 caracteres, incluyendo 1 número, 1 letra mayúscula y 1 letra minúscula.
+    password : Contraseña
+    reset_password : Restablecer contraseña
+    repeat_password : Repetir contraseña
+    my_mfa : Configuración de mi MFA
+    projects : Ámbitos
+    assessments : Evaluaciones
+    phases : Fases
+    users : Usuarios
+    close : Cerrar
+    import : Importar
+    profile_save_success : Tu perfil se guardó correctamente
+    stop_imitation : Detener imitación
+    team : Equipo
+    delete_button : Eliminar
+    delete_organization_button : Eliminar organización
+    done : Hecho
+    mfa_reset_device_tooltip : Restablecer dispositivo
+    mfa_reset_device_button : Restablecer
+    mfa_reset_device : Restablecer dispositivo
+    mfa_reset_device_title : ¿Estás seguro de que deseas restablecer el código MFA?
+    mfa_auth_code : Código de autenticación
+    mfa_backup_codes_title : Códigos de respaldo
+    mfa_backup_codes_text : |
+      Guarda estos códigos de respaldo en un lugar seguro: imprímelos, escríbelos o toma una captura de pantalla.
+      Si pierdes el acceso a tu dispositivo, puedes usar estos códigos para verificar tu identidad. Cada código solo se puede usar una vez.
+    mfa_choose_provider : Cambiar método de autenticación
+    mfa_code_invalid : El código de verificación no es válido.
+    mfa_invalid_code : ¡Tu código no es válido!
+    mfa_missing_code : ¡Falta el código!
+    mfa_success : Has configurado exitosamente tu autenticación multifactor (MFA)
+    mfa_title : Verificación en dos pasos
+    mfa_text : |
+      <ul>
+          <li>
+              Usa la cámara de tu teléfono para escanear este código de barras.
+              <div>
+                  <img src="{qr_code_data_uri}" alt='autenticación multifactor'/>
+             </div>
+          </li>
+      </ul>
+      Si tienes problemas con el escáner de código de barras, ingresa este código manualmente en tu aplicación de autenticación: <br/><b>{auth_mfa_secret}</b>
+      <div>Una vez escaneado el código de barras, ingresa el código de verificación de 6 dígitos generado por la aplicación de autenticación.</div>
+    mfa_trusted : Estoy en una computadora de confianza
+    accept : Aceptar
+    decline : Rechazar
+    toa_title : Términos de uso de SAMMY
+    toa_text : <div class="text-center toa-container">Esta es una versión de código abierto de SAMMY alojada en las instalaciones.</div>
+    change_password_title : Cambiar contraseña
+    sso_invalid_link : Tu enlace es incorrecto o ha expirado. Puedes solicitar un nuevo restablecimiento de contraseña desde esta página.
+    sso_expired_hash : El enlace de restablecimiento de contraseña ha expirado. Puedes solicitar un nuevo enlace de restablecimiento en esta página.
+    reset_password_help : Te enviaremos las instrucciones por correo electrónico
+    reset_password_button : Restablecer contraseña
+    reset_password_success : Si tu nombre de usuario o correo electrónico era correcto, te hemos enviado un nuevo enlace de inicio de sesión por correo electrónico.
+    password_change_success : Contraseña cambiada con éxito
+    register : Registrarse
+    register_button : Enviar registro
+    register_title : Registrarse en SAMMY
+    register_text : "Por favor, completa tus datos y recibirás un enlace automatizado para configurar tu contraseña.<br/><br/>
+      <i>Tu información se almacena en los Países Bajos y solo será utilizada por Codific BV para medir la adopción de SAMMY y decidir si continuar con su desarrollo.<br/> 
+      Para ver los términos y condiciones completos, consulta este documento: <a target='_blank' href='https://docs.google.com/document/d/1vMgAUvgF6wUUCdq1D9BB_DOg4pWqkfMYLq5kNTsH8rA'>Términos del acuerdo</a>
+      </i>"
+    register_success : Tu cuenta ha sido creada. Te hemos enviado las instrucciones por correo electrónico para completar la configuración de tu cuenta.
+    register_select_dropdown_placeholder : 'Por favor, elige una opción'
+    organization_info_title : Información de mi organización
+    organization_info_text : Casi listo, por favor completa los campos requeridos. Necesitamos esta información para conocer mejor la base de usuarios típica de SAMMY.
+    organization_info_success : Gracias por actualizar la información de tu organización.
+    organization_delete_success : Has eliminado correctamente tu organización
+    organization_delete_error : Hubo un problema al eliminar tu organización
+    menu :
+      dashboard : Panel de control
+      projects : Ámbitos
+      templates : Posturas objetivo
+      assessment : Evaluación
+      target_posture : Postura objetivo
+      manual : Manual de usuario
+      groups : Equipos
+      users : Usuarios
+      reporting : Informes
+    welcome_title : Bienvenido a SAMMY
+    back_to_home : Volver a la página de inicio
+    contact_success : El mensaje ha sido enviado con éxito.
+    contact_failed : Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.
+    contact_title : Contacto
+    contact_subject : Asunto
+    contact_message : Mensaje
+    send : Enviar
+    contact : Contacto
+    toolbox_export : Exportar respuestas en formato SAMM toolbox
+    clear_assessment_button : Borrar respuestas de evaluación
+    clear_assessment_text : ¿Estás seguro de que deseas borrar todas tus respuestas y empezar de nuevo?
+    meta_description : SAMMY es una herramienta gratuita de OWASP SAMM que te permite evaluar, medir, gestionar y mejorar sistemáticamente tu postura de seguridad. SAMMY es un calculador de OWASP SAMM que admite todas las funciones comerciales y prácticas de seguridad de OWASP SAMM.
+    no_new_notifications : No hay nuevas notificaciones
+    help : Ayuda
+    heading_modified_warning : El encabezado «{headingName}» para las rutas {routeNames} ha sido modificado y ya no es aplicable.
+    preview : Vista previa
+    search : Buscar
+    login_with_sso : Iniciar sesión
+    login_with_sso_tooltip : Inicia sesión con tu cuenta de {company}
+    select_all : Seleccionar todo
+    error_save_checkbox : 'Hubo un error al guardar las respuestas de la casilla de verificación.'
+
+    pagination :
+      first : Primero
+      last : Último
+      next : Siguiente
+      previous : Anterior
+      text : Mostrando {current} de {total} páginas
+
+  oauth :
+    invalid_state : Estado inválido
+
+  group :
+    add_title_tooltip : Crear un nuevo equipo
+    add_title_button : Crear un nuevo equipo
+    add_title : Crear un nuevo equipo
+    full_team : Ver todos los usuarios
+    team : Gestionar usuarios del equipo
+    name : Nombre del equipo
+    delete_button : Eliminar este equipo
+    delete_text : ¿Estás seguro de que deseas eliminar el equipo {group}?
+    save_button : Guardar este equipo
+    save_success : El equipo se ha creado con éxito
+    delete_success : El equipo {group} ha sido eliminado con éxito
+    parent : Grupo padre
+    project_edit_success : Los alcances se han guardado con éxito
+    projects : Alcances
+    manage_projects_title : Alcances a los que este equipo puede acceder
+    manage_projects_button : Gestionar alcances para este equipo
+    manage_projects_description : Selecciona los alcances a los que este equipo tendrá acceso
+    delete_disabled : Los equipos con usuarios no pueden ser eliminados
+    total_groups : Número total de equipos
+    search_by_placeholder : Buscar por nombre del equipo
+    show_all : Mostrar todo
+    overview_title_button : Resumen
+    no_parent : Sin grupo padre
+  user :
+    self : Este eres tú
+    self_text : Este es tu perfil. Ten en cuenta que cualquier modificación en tu perfil provocará un cierre de sesión.
+    external : Este usuario inicia sesión a través de un sistema externo.
+    last_login : Último inicio de sesión
+    list_title : Lista de todos los usuarios en todos los equipos
+    all_users : Todos los usuarios
+    username : Tu correo electrónico
+    password : Tu contraseña
+    microsoft_display_name : Nombre visible
+    import_users_from_gitlab_button : Importar
+    import_users_from_gitlab_tooltip : Importar usuarios desde GitLab
+    import_users_from_gitlab : Importar desde GitLab
+    import_users_from_gitlab_modal_title : Importar usuarios desde GitLab
+    import_users_from_gitlab_modal_text : Los usuarios importados no recibirán ninguna notificación. Después de una importación exitosa, el usuario que inicie sesión a través de GitLab será asignado a la misma organización.
+    fetching_gitlab_users_failed : Error al obtener usuarios de GitLab
+    import_users_from_microsoft_modal_title : Importar usuarios desde Microsoft
+    import_users_from_microsoft_modal_text : Los usuarios importados no recibirán ninguna notificación. Después de una importación exitosa, el usuario que inicie sesión a través de Microsoft será asignado a la misma organización.
+    import_users_from_microsoft_tooltip : Importar usuarios desde Microsoft
+    expired_token : Tu token de GitLab ha expirado. Por favor, cierra sesión y vuelve a iniciar sesión para actualizarlo.
+    invalid_user_id : El ID de usuario contiene símbolos no válidos.
+    no_users_selected : No se han seleccionado usuarios.
+    number_of_gitlab_users_imported : "Usuarios de GitLab importados: {total}. Ten en cuenta que, por defecto, los usuarios importados no están asignados a ningún alcance."
+    gitlab_user_import_failed : "Error al importar usuarios de GitLab."
+    gitlab_username : Nombre de usuario
+    group_label : Equipo
+    id : ID
+    name : Nombre
+    surname : Apellido
+    email : Correo electrónico
+    confirm_email : Confirmar correo electrónico
+    role : Roles
+    role_descriptions : |
+      <b>EVALUADOR</b> - puede completar una evaluación, <br>
+      <b>VALIDADOR</b> - puede validar una evaluación, <br>
+      <b>MEJORADOR</b> - se encarga de crear planes de mejora, <br>
+      <b>GERENTE</b> - el rol de usuario más alto que puede gestionar todo, <br>
+      <b>EVALUADOR EXTERNO</b> - puede crear evaluaciones y validaciones. Las puntuaciones validadas por el evaluador externo recibirán una marca. <br>
+    readonly_user : Usuario de solo lectura
+    save_button : Guardar
+    add_title : Crear un nuevo usuario
+    add_title_text : Al crear un usuario, este recibirá inmediatamente un correo electrónico de invitación de la plataforma SAMMY con su información de autenticación.
+    add_title_tooltip : Crear un nuevo usuario
+    add_title_button : Crear un nuevo usuario
+    save_success : «{user}» se guardó correctamente. Hemos enviado un correo de invitación a este usuario.
+    delete_button : Eliminar este usuario
+    delete_text : ¿Estás seguro de que deseas eliminar a «{user}»?
+    delete_success : «{user}» se eliminó correctamente.
+    delete_error : Algo salió mal. No pudimos eliminar a este usuario.
+    roles_modify_success : Los roles se modificaron correctamente.
+    roles : Roles
+    non_admin_role_enum : >-
+      {value, select,
+        ROLE_USER {Usuario}
+        ROLE_IMPROVER {Mejorador}
+        ROLE_VALIDATOR {Validador}
+        ROLE_MANAGER {Gerente}
+        ROLE_EVALUATOR {Evaluador}
+        ROLE_AUDITOR {Evaluador externo}
+        other {No especificado}
+      }
+    organization_role : Rol en la empresa
+    organization_role_enum : >-
+      {value, selectordinal,
+        =0 {Por favor, elige uno}
+        =1 {Personal académico}
+        =2 {Analista}
+        =3 {Arquitecto}
+        =4 {Nivel C (C-Level)}
+        =5 {Cumplimiento}
+        =6 {Consultor}
+        =7 {Desarrollador}
+        =8 {Propietario de producto}
+        =9 {Gerente de proyecto}
+        =10 {Personal de QA}
+        =11 {Investigador}
+        =12 {Administrador de sistemas}
+        =13 {Líder de equipo}
+        =50 {Otro}
+        other {No especificado}
+      }
+    industry : Industria
+    industry_enum : >-
+      {value, selectordinal,
+        =0 {Por favor, elige una}
+        =1 {Consultoría}
+        =2 {Educación}
+        =3 {Finanzas}
+        =4 {Gobierno}
+        =5 {Salud}
+        =6 {Servicios de TI}
+        =7 {Proveedor de productos de TI}
+        =8 {Investigación}
+        =50 {Otro}
+        other {No especificado}
+      }
+    size : Tamaño
+    size_enum : >-
+      {value, selectordinal,
+        =0 {Por favor, elige uno}
+        =1 {Pequeño}
+        =2 {Mediano}
+        =3 {Grande}
+        =50 {No aplica}
+        other {No especificado}
+      }
+    organization_domain : Dominio de la organización
+    organization_role_error : Hubo un error al configurar tu rol en la organización
+    edit_roles : Editar roles
+    details_button : Ver y modificar información del usuario
+    details_title : Detalles del usuario {user}
+    manage_roles_title : Cambiar roles
+    manage_roles_description : Selecciona los roles deseados y haz clic en el botón de guardar
+    projects : Alcances
+    group : Equipo
+    groups : Equipos
+    edit_group : Cambiar equipo
+    edit_projects : Editar alcance
+    manage_projects_title : Alcance asignado
+    manage_projects_description : Asigna un alcance a este usuario. Ten en cuenta que el rol de usuario es global y no puede definirse por alcance.
+    project_edit_success : Los alcances se han guardado correctamente
+    user_edit_success : El usuario se ha guardado correctamente
+    assignments : "Asignaciones"
+    active_assignments : "Asignaciones abiertas"
+    bad_groups : Grupos no válidos proporcionados
+    date_format : Formato de fecha
+    time_zone : Zona horaria
+    date_format_not_selected : No seleccionado
+    time_zone_not_selected : No seleccionado
+    import_title : Importar nuevos usuarios
+    import_title_text : Al crear un usuario, este recibirá inmediatamente un correo electrónico de invitación a SAMMY con sus datos de inicio de sesión.
+    import_button : Importar
+    import_bad_mime_type : Archivo no válido
+    import_file_too_large : El archivo es demasiado grande
+    download_import_template : Descargar plantilla
+    import_zero_sheets : No se proporcionaron hojas
+    import_success : Se importaron un total de «{users}» usuarios
+    import_wrong_roles : Roles incorrectos
+    import_users_button : Importar usuarios desde Excel
+    import_users_part_of_group : Los usuarios importados formarán parte del grupo «{group}»
+    import_users_no_group : Los usuarios importados no tendrán grupo
+    required_property : Propiedad requerida
+    import_too_many_cols : Se proporcionaron demasiadas columnas
+    export_users_button : Exportar usuarios a Excel
+    export_error : Ocurrió un error durante la exportación
+    total_users : Número total de usuarios
+    search_by_placeholder : Buscar por Nombre
+    roles_change_warning : 'Ten en cuenta que si cambias tus roles, deberás volver a autenticarte'
+
+  session :
+    modal_title : Tu sesión ha expirado
+    modal_description : Por razones de seguridad, tu sesión en SAMMY ha expirado. Debes iniciar sesión nuevamente.
+    modal_button_extend : Extender sesión
+    modal_button_login : Ir a inicio de sesión
+
+  streams :
+    tabs :
+      evaluation : Evaluación
+      documentation : Documentación
+      documentation_and_timeline : Documentación y línea de tiempo
+      reference_documentation : Documentación de referencia
+      show_in_new_window : Abrir en una nueva ventana
+      show_hide : Mostrar/Ocultar
+      show_inline : Mostrar en línea
+      validation : Validación
+      improvement : Mejora
+      progress : Progreso
+      timeline : Línea de tiempo
+      completed : Completado
+      audit : Evaluación externa
+
+  assessment :
+    demo : Estás completando una evaluación anónima de SAMM. Inicia sesión para acceder a la versión completa de SAMMY.
+    start : Cambiar a este alcance
+    start_stream : Iniciar
+    title : Evaluación
+    next : Siguiente
+    back : Atrás
+    overview : Resumen de puntuaciones
+    project : Alcance
+    activities : Actividades
+    objective : Objetivo
+    stats : Estadísticas
+    description : Descripción
+    begin : Comenzar evaluación
+    evidence : Evidencia y documentación
+    assessment_complete : Evaluación completada
+    submit_stream_success : El flujo se ha enviado correctamente
+    submit_evidence_success : La documentación se ha subido correctamente
+    target_date : Fecha objetivo
+    start_improve_stream_success : La mejora del flujo se ha enviado correctamente
+    finish_improve_stream_success : La mejora del flujo se ha finalizado correctamente
+    cancel_improve_stream_success : La mejora del flujo se ha cancelado
+    improvement_target_date : Fecha objetivo para la mejora
+    improvement_plan : Plan de la Fase 1 de mejora
+    improvement_owner : Asignado a
+    validation_remarks : Comentarios de validación
+    audit_remarks : Observaciones / recomendaciones
+    start_improvement_button : Finalizar Fase 1 de mejora
+    cancel_improvement_button : Eliminar Fase 1 de mejora
+    save_improvement_button : Guardar Fase 1 de mejora
+    save_improvement_button_tooltip : Puedes guardar las respuestas y el plan que has escrito hasta ahora. Ten en cuenta que serán visibles para otros participantes de la mejora.
+    save_improvement_plan_success : El plan de la Fase 1 de mejora y las respuestas se han guardado correctamente
+    will_improve_button : Iniciar Fase 1 de mejora
+    user_improving_stream : Usuario mejorando el flujo
+    star_rating_question : ¿Qué tan importante es mejorar en esta práctica de seguridad?
+    submit_rating_success : La valoración se ha enviado correctamente
+    awaiting_improvement : Por mejorar
+    improvement_in_progress : En progreso
+    audit_stream_error : Ocurrió un error en el proceso de auditoría
+    validate_stream_error : Ocurrió un error en el proceso de validación
+    validate_stream_accepted : La validación del flujo fue aceptada
+    validate_stream_rejected : La validación del flujo fue rechazada
+    validate_stream_auto_accepted : La validación del flujo fue aceptada automáticamente
+    validate_stream_retracted : La presentación del flujo fue retirada
+    star_rating_enum : >-
+      {value, selectordinal,
+        =1 {Sin importancia}
+        =2 {Poco importante}
+        =3 {Promedio}
+        =4 {Importante}
+        =5 {Muy importante}
+        other {No especificado}
+      }
+    upload_file : Subir un documento
+    submit_attachment_success : El documento se ha subido correctamente
+    start_stream_validation : Validar este flujo
+    file_too_large : El documento es demasiado grande. Tamaño máximo permitido 2MB.
+    bad_mime_type : Por favor, sube un archivo válido
+    remark_delete_button : Eliminar
+    delete_remark_success : El comentario se ha eliminado correctamente.
+    missing_file : Archivo faltante.
+    remark_delete_tooltip : Eliminar
+    remark_edit_tooltip : Editar
+    documentation : Documentación
+    reference : Documentación de referencia
+    bad_attachment_values : Por favor, completa todos los campos requeridos
+    file : Archivo
+    action : Acción
+    improvement_bad_data : El plan de mejora está incompleto. Completa todos los campos requeridos antes de enviarlo.
+    stage_type : Tipo
+    stage_status : Estado
+    meta_description : Usa la herramienta SAMMY para evaluar la madurez de seguridad de tu organización según el modelo OWASP SAMM. Esta es una versión ligera y gratuita que permite exportar al OWASP SAMM Toolbox.
+    reactivate_stream : Mover el flujo de vuelta a mejora
+    reactivate_improve_stream_success : El flujo ha sido reactivado correctamente
+    finish_improvement : Finalizar mejora
+    archive_stream : Archivar este flujo y reiniciar la evaluación
+    complete_stream : Completar este flujo sin mejoras
+    complete_stream_info : Marca el flujo como completo, ya que no necesita mejoras (por el momento).
+    add_text : Escribir un comentario
+    remark_uploaded_at : Subido el
+    remarks : Comentarios
+    remark_text : Texto
+    remark_delete_text : ¿Estás seguro de que deseas eliminar este comentario?
+    remark_submitted_by : Enviado por
+    remark_maturity_levels : Niveles de madurez
+    remark_submitted_at : Enviado el
+    phase1_scores : Puntuaciones de la Fase 1 de mejora
+    phase1_info : <i>Tus respuestas validadas actuales están marcadas en azul. Por favor, selecciona tu respuesta deseada para cada pregunta.</i>
+    scope_change : "El alcance se cambió a {scope}"
+    improved_score : "Puntuación después de implementar la mejora: "
+    previous_answer : Respuesta previamente seleccionada
+    desired_answer : Fase 1 de mejora
+    improvement_phase_1 : Fase 1 de mejora
+    improvement_phase_1_with_date : Fase 1 de mejora para {date}
+    unvalidated_score : "Puntuación no validada: "
+    allowed_mime_types_and_file_size : "Tipos de archivo permitidos: {fileExtensions}. <br> Tamaño máximo permitido: {fileSize} MB"
+    improvement_edit : Editar mejora
+    improvement_edit_close : Cerrar edición de mejora
+    validation_edit : Editar comentarios
+    validation_edit_close : Cancelar edición
+    edit_validation_success : Los comentarios se han actualizado
+    no_preview : 'No hay vista previa disponible para este tipo de archivo'
+    maturity_level_remark : Nivel de madurez
+    validation_remark_documentation : Comentario de validación
+    improvement_remark_documentation : Plan de mejora
+    remarks_timeline : Comentarios
+    assignment_popup_warning_title : Estás a punto de sobrescribir una asignación
+    assignment_popup_warning : Esta etapa no está asignada a ti. Si continúas, el usuario asignado recibirá una notificación, su asignación será eliminada y tú serás asignado a esta etapa.
+    reference_guidance_tooltip : Esta guía se basa en la Postura Objetivo para este proyecto, definida por tu organización.
+    no_guidance : No hay guía disponible para esta actividad.
+    save_validation_remark_tooltip : Puedes guardar el comentario que has escrito hasta ahora. Ten en cuenta que será visible para otros validadores.
+    save_validation_remark_success : El comentario se ha guardado correctamente
+    template_answer : Respuesta objetivo
+    template_remark_modal_title : Comentarios de referencia
+    changes_saved : Comentarios guardados
+    could_not_download_remark : No se pudo descargar el archivo
+    current_answer : Respuesta actual
+    externally_verified_answer : Última respuesta verificada externamente el {date}
+
+  template_project :
+    add_title : Agregar una nueva postura objetivo
+    add_title_button : Crear una nueva postura objetivo
+    add_btn : Agregar
+    projects : Ámbitos
+    templates : Posturas objetivo
+    links : Asignar posturas objetivo
+    warning_badge : "Estás en modo de gestión de posturas objetivo."
+    streams : Flujos de posturas objetivo
+
+  project :
+    add_title : Agregar un nuevo ámbito
+    add_btn : Agregar
+    add_title_button : Crear un nuevo ámbito
+    add_title_tooltip : Agregar un nuevo ámbito
+    add_user_text : Agregar usuario al ámbito
+    add_user_tooltip : Agregar usuario al ámbito
+    delete_tooltip : Eliminar este ámbito
+    migrate_tooltip : Migrar este proyecto a SAMM 2.1
+    delete_text : ¿Estás seguro de que deseas eliminar el ámbito «{project}»?
+    delete_button : Eliminar
+    delete_success : El ámbito «{project}» se eliminó con éxito.
+    restore_button : Restaurar
+    restore_title : ¿Estás seguro de que deseas desarchivar este ámbito?
+    unarchive : Desarchivar este ámbito
+    assessments : Evaluaciones
+    phases : Fases
+    name : Nombre
+    description : Descripción
+    teams : Equipos
+    clear : Limpiar
+    save_button : Guardar
+    users_selected : usuarios seleccionados
+    save_success : «{project}» se guardó con éxito.
+    restore_success : «{project}» se restauró con éxito.
+    manage_users_title : Equipos con acceso a este ámbito
+    manage_users_description : Agregar / eliminar equipos de este ámbito.
+    team_edit_success : Los equipos se guardaron con éxito.
+    unvalidated_score : Puntuación general no validada
+    score : Puntuación general validada
+    validation_threshold : Umbral de validación
+    validation_threshold_tooltip : Usar un umbral distinto de cero permite activar una validación automática de la evaluación. Esto es útil para puntuaciones bajas (por ejemplo, 0.5) donde los beneficios de una validación formal son menos evidentes.
+    template_tooltip : Puedes crear posturas objetivo y asignarlas a ámbitos. Una postura objetivo define las puntuaciones base para cada actividad de SAMM sin especificar el "cuándo".
+    ajaxError : Edición de campo no autorizada
+    templates : Gestionar posturas objetivo del ámbito
+    manage_template_button : Posturas objetivo
+    manage_template_title : Lista de todas las posturas objetivo
+    template : Postura objetivo
+    metamodel : Modelo base
+    import_zero_sheets : No se proporcionaron hojas
+    samm_version_undetected : No se pudo detectar la versión de SAMM
+    question_not_found : No se encontró la pregunta en la herramienta
+    answer_not_found : No se encontró la respuesta en nuestra base de datos
+    import_toolbox_tooltip : Importar desde la herramienta SAMM
+    import_toolbox_title : Crear un ámbito desde la herramienta SAMM
+    import_toolbox_submit : Importar
+    import_toolbox_placeholder : Seleccionar archivo .xlsx de la herramienta SAMM (1.5 o 2.0)
+    import_toolbox_type_error : Tipo de archivo adjunto incorrecto
+    import_toolbox_autovalidate : Validar automáticamente todos los flujos
+    import_toolbox_project_name_15 : Importar desde la herramienta versión 1.5
+    import_toolbox_project_name_20 : Importar desde la herramienta versión 2.0
+    search_by_name : Buscar por nombre
+    switch_success : Cambio exitoso a {projectName}
+
+  stream :
+    submit : Finalizar la evaluación y enviar para validación
+    retract-submission : Retirar envío del flujo
+    restricted_view : 'Vista restringida: no tienes el rol adecuado para trabajar en este flujo'
+    validation_skipped_zero : Se respondieron las tres preguntas con "No", por lo que se omitió el paso de validación.
+    validation_skipped_threshold : "Se omitió el paso de validación porque la puntuación no supera el umbral de validación ({threshold}<sup>*</sup>) para este ámbito. <br> * Puedes cambiar este valor en el menú \"Gestionar ámbitos\"."
+    evidence_empty : No se ha subido documentación para este flujo.
+    assigned_to : "Asignado a: {user}"
+    submitted_by : "Evaluado por: {name} {surname}"
+    validated_by : "Validado por"
+    validated_at : Fecha de validación
+    improvement_by : "Mejora iniciada por: {name} {surname}"
+    date : "Fecha: "
+    mode : "Estado: {mode}"
+    score : "{score}"
+    score_tooltip : Puntuación SAMM para este flujo. Nota que la puntuación solo se actualiza tras la validación.
+    auto : Validación automática
+    retract_error : El estado del flujo ha cambiado y ya no se puede retirar
+    improve_incorrect_stream_error : El estado del flujo ha cambiado y el plan no se puede guardar
+    retract_validation : Retirar validación
+    retract_validation_hover : Retirar a la etapa de validación
+
+  timeline :
+    assigned_to : "Asignado a"
+    submitted_by : "Evaluado por"
+    validated_by : "Validado por"
+    rejected_by : "Rechazado por"
+    retracted_by : "Retirado por"
+    auto_validated : "Validado automáticamente"
+    improved_by : "Mejorado por"
+    restarted_by : "Reiniciado por"
+    completed : "Completado"
+
+  nav :
+    todos : 'Tienes {number} asignaciones activas para este ámbito'
+
+  stage :
+    evaluation : 'evaluación'
+    validation : 'validación'
+    improvement : 'mejora'
+
+  actions :
+    submitted_by : "Evaluado por: {name}"
+    validated_by : "Validado por {name}"
+    improved_by : "Mejorado por {name}"
+    auto_validated : "Validado automáticamente"
+
+  language:
+    language_change_success: "El idioma ha sido cambiado exitosamente"
+    language_change_error: "Hubo un error al cambiar el idioma"

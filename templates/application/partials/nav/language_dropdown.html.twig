@@ -1,0 +1,36 @@
+<div id="language-dropdown" class="header-btn-lg language-menu-nav justify-content-end w-auto">
+    {% set languages = render(controller('App\\Controller\\Application\\LanguageController::getLanguages'))|json_decode %}
+    <div class="widget-content p-0">
+        <div class="widget-content-wrapper">
+            <div class="widget-content-left ml-3">
+                <div class="btn-group">
+                    <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                        <span class="mb-2 mt-2 btn-icon btn btn-outline-info text-nowrap">
+                            <span class="d-inline-block">
+                                {% if languages[app.request.locale] is defined %}
+                                    <span>{{ languages[app.request.locale].icon }} {{ languages[app.request.locale].label }}</span>
+                                {% endif %}
+                                <i class="fa fa-angle-down opacity-8"></i>
+                            </span>
+                        </span>
+                    </a>
+                    <div tabindex="-1" role="menu" aria-hidden="true" class="rm-pointers dropdown-menu-sm dropdown-menu dropdown-menu-right">
+                        <div class="scrollbar-container ps">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    {% for language in languages %}
+                                        {% if app.request.locale != language.code  %}
+                                            <a href="{{ path('app_language_change_language', {'code': language.code}) }}" class="nav-link btn dropdown-item">
+                                                <span>{{ language.icon }} {{ language.label }}</span>
+                                            </a>
+                                        {% endif %}
+                                    {% endfor %}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

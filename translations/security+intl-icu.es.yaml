@@ -1,0 +1,2 @@
+general:
+  breached_password: Esta contraseña ha sido filtrada en una violación de datos, no debe ser usada. Por favor cambie su contraseña.
